@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="ecg_gain">
+        <item>5mm/mV</item>
+        <item>10mm/mV</item>
+        <item>20mm/mV</item>
+    </array>
+    <array name="ecg_pager_speed">
+        <item>25mm/s</item>
+        <item>50mm/s</item>
+    </array>
+    <array name="face_option">
+        <item>从相册选取</item>
+        <item>拍照</item>
+    </array>
+    <array name="health_monitor_dev_name_prefixes">
+        <item>HC02</item>
+    </array>
+    <array name="history_item">
+        <item>心电</item>
+        <item>血压</item>
+        <item>血氧</item>
+        <item>血糖</item>
+        <item>体温</item>
+    </array>
+    <array name="member_set">
+        <item>切换</item>
+        <item>删除</item>
+    </array>
+    <array name="strip_code_list">
+        <item>C00</item>
+        <item>C01</item>
+        <item>C02</item>
+        <item>C03</item>
+        <item>C04</item>
+        <item>C05</item>
+        <item>C06</item>
+        <item>C07</item>
+        <item>C08</item>
+        <item>C09</item>
+        <item>C10</item>
+        <item>C11</item>
+        <item>C12</item>
+        <item>C13</item>
+        <item>C14</item>
+        <item>C15</item>
+        <item>C16</item>
+        <item>C17</item>
+        <item>C18</item>
+        <item>C19</item>
+        <item>C20</item>
+        <item>C21</item>
+        <item>C22</item>
+        <item>C23</item>
+        <item>C24</item>
+        <item>C25</item>
+        <item>C26</item>
+        <item>C27</item>
+        <item>C28</item>
+        <item>C29</item>
+        <item>C30</item>
+        <item>C31</item>
+        <item>C32</item>
+        <item>C33</item>
+        <item>C34</item>
+        <item>C35</item>
+    </array>
+    <array name="temperature_unit">
+        <item>摄氏度(℃)</item>
+        <item>华氏度(℉)</item>
+    </array>
+</resources>

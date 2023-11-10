@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_58" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <TextView android:id="@+id/dot_1" android:background="@drawable/dot_select" android:layout_width="@dimen/dp_8" android:layout_height="@dimen/dp_8" android:layout_marginEnd="@dimen/dp_10"/>
+        <TextView android:id="@+id/dot_2" android:background="@drawable/dot_select" android:layout_width="@dimen/dp_8" android:layout_height="@dimen/dp_8" android:layout_marginEnd="@dimen/dp_10"/>
+    </LinearLayout>
+    <androidx.viewpager2.widget.ViewPager2 android:id="@+id/vp_guide" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

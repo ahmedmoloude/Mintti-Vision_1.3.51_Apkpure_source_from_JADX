@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:id="@+id/ll_data_unit" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_40" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10">
+        <TextView android:textSize="15sp" android:textColor="@color/gray666" android:gravity="center_vertical" android:id="@+id/tv_list_data" android:layout_width="wrap_content" android:layout_height="@dimen/dp_40" android:text="2019年11月" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/gray666" android:gravity="center_vertical" android:id="@+id/tv_list_unit" android:layout_width="wrap_content" android:layout_height="@dimen/dp_40" android:text="@string/unit"/>
+        <TextView android:textSize="15sp" android:textColor="@color/gray666" android:gravity="center_vertical" android:id="@+id/tv_list_unitvalue" android:layout_width="wrap_content" android:layout_height="@dimen/dp_40" android:text="℃"/>
+    </LinearLayout>
+    <include android:id="@+id/data_item" layout="@layout/history_measure_item"/>
+</LinearLayout>

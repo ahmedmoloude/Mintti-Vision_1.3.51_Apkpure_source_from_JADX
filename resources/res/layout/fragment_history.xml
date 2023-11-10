@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_white"/>
+    <com.androidkun.xtablayout.XTabLayout android:id="@+id/tl_tab" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:xTabIndicatorColor="@color/darkGreen" app:xTabIndicatorHeight="@dimen/dp_1" app:xTabIndicatorWidth="@dimen/dp_30" app:xTabSelectedTextColor="@color/darkGreen" app:xTabSelectedTextSize="@dimen/sp_16" app:xTabTextColor="@color/gray_333" app:xTabTextSize="@dimen/sp_16"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/vp_record" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

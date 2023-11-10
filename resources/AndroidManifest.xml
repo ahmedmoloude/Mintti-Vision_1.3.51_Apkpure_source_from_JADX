@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="93" android:versionName="1.3.51" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.kl.healthmonitor" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="33"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" android:usesPermissionFlags="10000"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="10000"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <queries>
+        <package android:name="androidx.test.orchestrator"/>
+        <package android:name="androidx.test.services"/>
+        <package android:name="com.google.android.apps.common.testing.services"/>
+    </queries>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/logo" android:name="com.p020kl.healthmonitor.base.AppApplication" android:allowBackup="true" android:supportsRtl="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@drawable/logo" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:name="com.p020kl.healthmonitor.history.PdfCheckActivity" android:exported="false" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name="com.p020kl.healthmonitor.ViewActivity" android:exported="false" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:theme="@style/SplashTheme" android:name="com.p020kl.healthmonitor.SplashActivity" android:exported="true" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.p020kl.healthmonitor.MainActivity" android:exported="false" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name="com.p020kl.healthmonitor.sign.SignActivity" android:exported="false" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:name="com.yalantis.ucrop.UCropActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.kl.healthmonitor" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <service android:name="com.p020kl.healthmonitor.service.SyncService" android:exported="false"/>
+        <service android:name="com.p020kl.healthmonitor.base.dfu.DfuService" android:exported="false"/>
+        <activity android:theme="@style/Theme" android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme" android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Dialog" android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.linktop.whealthService.OnBLEService" android:enabled="true"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

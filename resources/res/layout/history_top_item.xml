@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_marginHorizontal="@dimen/dp_10">
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/darkGreen" android:id="@+id/tv_history_top_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/day"/>
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/gray_999" android:id="@+id/tv_history_top_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:text="@string/week"/>
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/gray_999" android:id="@+id/tv_history_top_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:text="@string/month" android:layout_weight="1"/>
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/gray_999" android:id="@+id/tv_history_top_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit"/>
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/gray_999" android:id="@+id/tv_history_top_unitvalue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="℃"/>
+</LinearLayout>

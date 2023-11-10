@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/cv_card_broke2" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_200">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_top_select" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_200">
+        <TextView android:gravity="center_vertical" android:id="@+id/tv_unit" android:background="@color/white" android:paddingLeft="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="@dimen/dp_40" android:text="单位：℃"/>
+        <com.p020kl.healthmonitor.views.ChartView android:id="@+id/pdf_chart_view" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="match_parent" app:interval="@dimen/dp_65" app:linecolor="#44bcb1" app:xytextcolor="#999" app:xytextsize="@dimen/dp_12"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

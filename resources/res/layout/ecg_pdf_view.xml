@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/write" android:layout_width="match_parent" android:layout_height="@dimen/dp_200">
+    <com.p020kl.commonbase.views.ecg.EcgBackgroundView android:background="@color/write" android:layout_width="match_parent" android:layout_height="match_parent" app:largeGridColor="#ff0022" app:smallGridColor="#ff0033"/>
+    <com.p020kl.commonbase.views.ecg.PdfEcgWaveView android:id="@+id/ecg_wave_view2" android:layout_width="wrap_content" android:layout_height="@dimen/dp_200" app:scrollable="true" app:waveColor="@color/black" app:waveStrokeWidth="@dimen/dp_1"/>
+</FrameLayout>

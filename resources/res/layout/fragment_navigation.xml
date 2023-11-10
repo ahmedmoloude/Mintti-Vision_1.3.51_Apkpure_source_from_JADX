@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/fl_content_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/dp_58"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:layout_gravity="bottom" android:id="@+id/bottom_nav_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_58" app:elevation="@dimen/dp_16" app:itemTextColor="@color/main_bottom" app:menu="@menu/menu_bottom_navigation_view"/>
+</FrameLayout>

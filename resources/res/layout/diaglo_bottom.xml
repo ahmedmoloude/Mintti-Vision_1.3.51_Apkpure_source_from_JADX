@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/dp_15" android:textColor="@color/gray666" android:gravity="center" android:id="@+id/bt_diaglo_select" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" android:text="从相册选取"/>
+    <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="@dimen/dp_1"/>
+    <TextView android:textSize="@dimen/dp_15" android:textColor="@color/gray666" android:gravity="center" android:id="@+id/bt_diaglo_take" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" android:text="拍照"/>
+</LinearLayout>

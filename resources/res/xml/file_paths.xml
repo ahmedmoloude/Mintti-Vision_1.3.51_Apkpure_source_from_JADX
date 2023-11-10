@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <external-path name="camera_photos" path="."/>
+    <external-path name="my_files" path="apk"/>
+    <root-path name="root_path" path="."/>
+    <external-files-path name="external-files-path" path="pdf/"/>
+    <external-cache-path name="name" path="."/>
+    <external-path name="images" path="Pictures"/>
+</paths>

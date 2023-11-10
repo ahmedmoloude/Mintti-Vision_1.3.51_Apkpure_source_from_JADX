@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_white"/>
+    <androidx.cardview.widget.CardView android:id="@+id/fbt_ecg" android:layout_width="match_parent" android:layout_height="@dimen/dp_250" android:layout_marginLeft="@dimen/dp_15" android:layout_marginRight="@dimen/dp_15" android:elevation="@dimen/dp_8" android:layout_marginHorizontal="@dimen/dp_15" app:cardCornerRadius="@dimen/dp_8">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_180">
+            <com.p020kl.commonbase.views.ecg.EcgBackgroundView android:layout_width="match_parent" android:layout_height="match_parent" app:largeGridColor="#eeeeee" app:smallGridColor="#eeeeee"/>
+            <com.p020kl.commonbase.views.ecg.ChartView android:id="@+id/ecg_chart_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_66" android:layout_marginLeft="@dimen/dp_10">
+            <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_timebase" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" app:measure_type_level="@string/paper_speed_" app:measure_unit_level="mm/s" app:measure_value_level="25"/>
+            <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_gain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_3" app:measure_type_level="@string/gain_" app:measure_unit_level="mm/mv" app:measure_value_level="10"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="@dimen/dp_125" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_15" android:elevation="@dimen/dp_8" android:layout_marginHorizontal="@dimen/dp_15" app:cardCornerRadius="@dimen/dp_8">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_13" android:layout_marginTop="@dimen/dp_20" android:layout_marginRight="@dimen/dp_13">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_primax" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_3" app:measure_type_level="@string/rri_max" app:measure_unit_level="ms" app:measure_value_level="0"/>
+                <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_heart_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_14" app:measure_type_level="@string/average_heart_rate" app:measure_unit_level="BPM" app:measure_value_level="0"/>
+                <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_br" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_14" app:measure_type_level="@string/respiratory_rate" app:measure_unit_level="BPM" app:measure_value_level="0"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_primin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_3" app:measure_type_level="@string/rri_min" app:measure_unit_level="ms" app:measure_value_level="0"/>
+                <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_hrv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_14" app:measure_type_level="@string/hrv" app:measure_unit_level="ms" app:measure_value_level="0"/>
+                <com.p020kl.healthmonitor.views.MeasureItemLevelView android:id="@+id/mlv_ecg_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_14" app:measure_type_level="@string/ecg_measure_duration" app:measure_unit_level="s" app:measure_value_level="0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Button android:id="@+id/bt_ecg_measure" android:layout_marginTop="@dimen/dp_50" android:text="@string/start_measure" style="@style/bigButton"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_normal"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/background_gradient" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <p026de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center_horizontal" android:id="@+id/civ_my_img" android:layout_width="@dimen/dp_73" android:layout_height="@dimen/dp_73" android:layout_marginTop="@dimen/dp_16" android:src="@mipmap/ic_launcher"/>
+                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_my_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_15" android:layout_marginBottom="@dimen/dp_35" android:text="@string/my_username"/>
+            </LinearLayout>
+            <com.p020kl.healthmonitor.views.UserItemView android:id="@+id/uiv_problem_feedback" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:itemText="@string/feedback" app:leftImgSrc="@drawable/problem_feedback"/>
+            <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="@dimen/dp_1" android:layout_marginLeft="@dimen/dp_45"/>
+            <com.p020kl.healthmonitor.views.UserItemView android:id="@+id/uiv_problem_faq" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:itemText="@string/faq" app:leftImgSrc="@drawable/faq"/>
+            <View android:background="@color/grayeee" android:layout_width="match_parent" android:layout_height="@dimen/dp_10"/>
+            <com.p020kl.healthmonitor.views.UserItemView android:id="@+id/uiv_problem_about" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:itemText="@string/about" app:leftImgSrc="@drawable/about"/>
+            <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="@dimen/dp_1" android:layout_marginLeft="@dimen/dp_45"/>
+            <com.p020kl.healthmonitor.views.UserItemView android:id="@+id/uiv_problem_mydevice" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:itemText="@string/my_device" app:leftImgSrc="@drawable/my_device"/>
+            <View android:background="@color/grayeee" android:layout_width="match_parent" android:layout_height="@dimen/dp_10"/>
+            <com.p020kl.healthmonitor.views.UserItemView android:id="@+id/uiv_guide" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:itemText="@string/operation_guide" app:leftImgSrc="@drawable/icon_guide"/>
+            <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="@dimen/dp_1" android:layout_marginLeft="@dimen/dp_45"/>
+            <com.p020kl.healthmonitor.views.UserItemView android:id="@+id/uiv_add_member" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:itemText="@string/add_member" app:leftImgSrc="@drawable/add"/>
+            <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="@dimen/dp_1" android:layout_marginLeft="@dimen/dp_45"/>
+            <com.p020kl.healthmonitor.views.UserItemView android:id="@+id/uiv_problem_setting" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" app:itemText="@string/setting" app:leftImgSrc="@drawable/setting"/>
+            <View android:background="@color/grayeee" android:layout_width="match_parent" android:layout_height="@dimen/dp_10"/>
+            <Button android:textSize="@dimen/sp_16" android:textColor="@color/gray666" android:gravity="center" android:id="@+id/btn_sign_out" android:background="@color/layout_normal" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" android:text="@string/log_out" android:textAllCaps="false"/>
+            <View android:background="@color/grayeee" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

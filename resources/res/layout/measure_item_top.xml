@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/dp_15" android:textColor="@color/darkGreen" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/tv_measure_project" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heart_rate"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dp_25" android:textColor="@color/darkGreen" android:layout_gravity="bottom" android:id="@+id/tv_measure_value_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/darkGreen" android:layout_gravity="bottom" android:id="@+id/tv_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dp_10" android:textColor="@color/darkGreen" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/tv_measure_result" android:background="@drawable/txt_circle_shape" android:paddingLeft="@dimen/dp_5" android:paddingRight="@dimen/dp_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/waiting_for_test"/>
+</LinearLayout>

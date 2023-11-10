@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_white"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_50">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:src="@drawable/ic_code"/>
+        <EditText android:id="@+id/et_index_search" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:hint="@string/search"/>
+    </LinearLayout>
+    <View android:background="@color/lightGray" android:layout_width="match_parent" android:layout_height="@dimen/dp_1"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ListView android:id="@+id/lv_index_list" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <TextView android:textSize="@dimen/dp_20" android:gravity="center" android:id="@+id/tv_index_code" android:background="#44000000" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_50" android:text="A" android:layout_centerInParent="true"/>
+        <com.kl.healthmonitor.sign.IndexView android:id="@+id/iv_words" android:layout_width="@dimen/dp_50" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

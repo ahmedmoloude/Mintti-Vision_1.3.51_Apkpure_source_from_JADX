@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="@dimen/dp_18" android:paddingTop="@dimen/dp_8" android:paddingRight="@dimen/dp_18" android:paddingBottom="@dimen/dp_8" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:id="@+id/tv_question_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="01." app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0" style="@style/textQuestion"/>
+    <TextView android:id="@+id/tv_question" android:layout_width="0dp" android:layout_height="wrap_content" android:text="您是否曾经感到自己的心跳暂停，或者呼吸急促，头晕或胸痛？" app:layout_constraintLeft_toRightOf="@+id/tv_question_index" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/textQuestion"/>
+    <RadioGroup android:orientation="horizontal" android:id="@+id/rg_question_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" app:layout_constraintLeft_toLeftOf="@+id/tv_question" app:layout_constraintTop_toBottomOf="@+id/tv_question">
+        <RadioButton android:textSize="@dimen/dp_14" android:id="@+id/rb_yes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/radio_yes" android:buttonTint="@color/colorPrimary"/>
+        <RadioButton android:textSize="@dimen/dp_14" android:id="@+id/rb_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_100" android:checked="true" android:text="@string/radio_no" android:buttonTint="@color/colorPrimary"/>
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

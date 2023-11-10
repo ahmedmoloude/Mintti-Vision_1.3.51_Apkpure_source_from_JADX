@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_white"/>
+    <androidx.cardview.widget.CardView android:id="@+id/cv_bp_top" android:layout_width="match_parent" android:layout_height="@dimen/dp_200" android:layout_marginLeft="@dimen/dp_15" android:layout_marginRight="@dimen/dp_15" android:elevation="@dimen/dp_8" app:cardCornerRadius="@dimen/dp_8">
+        <ImageView android:layout_gravity="center" android:id="@+id/iv_bp_img1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arc1"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/iv_bp_img2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arc2"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/iv_bp_img3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arc3"/>
+        <include layout="@layout/measure_item_top"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/cv_bp_bottom" android:layout_width="match_parent" android:layout_height="@dimen/dp_220" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_15" android:elevation="@dimen/dp_8" app:cardCornerRadius="@dimen/dp_8">
+        <LinearLayout android:layout_gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/dp_110" android:layout_marginTop="@dimen/dp_20">
+            <com.p020kl.healthmonitor.views.MeasureItemView android:id="@+id/miv_bp_sp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:measure_type="@string/systolic_pressure" app:measure_unit="mmHg" app:measure_value="0"/>
+            <com.p020kl.healthmonitor.views.MeasureItemView android:id="@+id/miv_bp_dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:measure_type="@string/diastolic_pressure" app:measure_unit="mmHg" app:measure_value="0" app:unit=""/>
+            <com.p020kl.healthmonitor.views.MeasureItemView android:id="@+id/miv_bp_hr" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:measure_type="@string/heart_rate" app:measure_unit="bpm" app:measure_value="0" app:unit=""/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_40">
+            <TextView android:textSize="@dimen/dp_15" android:textColor="@color/grayfc999" android:layout_gravity="bottom" android:id="@+id/tv_dp_itemtop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/systolic_pressure"/>
+            <com.p020kl.healthmonitor.views.CustomResultProgressBar android:id="@+id/result_progressbar_sp" android:layout_width="@dimen/dp_200" android:layout_height="wrap_content" android:layout_marginStart="5dp" app:left_text="90" app:left_view="@drawable/view_circke_shape_lefttwo" app:left_view_weight="0.45" app:middle_view="@color/darkGreen" app:middle_view_weight="0.25" app:right_text="140" app:right_view="@drawable/view_circke_shapetwo" app:right_view_weight="0.3"/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_80">
+            <TextView android:textSize="@dimen/dp_15" android:textColor="@color/grayfc999" android:layout_gravity="bottom" android:id="@+id/tv_dp_itemblw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/diastolic_pressure"/>
+            <com.p020kl.healthmonitor.views.CustomResultProgressBar android:id="@+id/result_progressbar_dp" android:layout_width="@dimen/dp_130" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_5" app:left_text="60" app:left_view="@drawable/view_circke_shape_lefttwo" app:left_view_weight="0.462" app:middle_view="@color/darkGreen" app:middle_view_weight="0.22" app:right_text="90" app:right_view="@drawable/view_circke_shapetwo" app:right_view_weight="0.307"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Button android:id="@+id/bt_bp_measure" android:layout_marginTop="@dimen/dp_50" android:text="@string/start_measure" style="@style/bigButton"/>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_white"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_first_page" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_50">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="@dimen/dp_200" android:layout_marginTop="@dimen/dp_10" android:layout_marginStart="@dimen/dp_15" android:layout_marginEnd="@dimen/dp_15" android:elevation="@dimen/dp_8" app:cardCornerRadius="@dimen/dp_8">
+            <FrameLayout android:layout_gravity="center" android:layout_width="@dimen/dp_136" android:layout_height="@dimen/dp_136">
+                <com.p020kl.healthmonitor.views.CircleBarView android:id="@+id/circle_bar_view" android:layout_width="match_parent" android:layout_height="match_parent" app:bar_color="@color/circle_bar" app:bar_width="@dimen/dp_5" app:bg_color="@color/circle_bg"/>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/dp_11" android:textColor="@color/text_gray_80999" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/tv_measure_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/two_hours_after_a_meal"/>
+                    <TextView android:textSize="@dimen/dp_35" android:textStyle="bold" android:textColor="@color/text_gray_80333" android:layout_gravity="center_horizontal" android:id="@+id/tv_bg_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                    <TextView android:textSize="@dimen/dp_16" android:textColor="@color/text_gray_80333" android:layout_gravity="center_horizontal" android:id="@+id/tv_bg_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="mmol/L"/>
+                    <TextView android:textSize="@dimen/dp_10" android:textColor="@color/darkGreen" android:layout_gravity="center_horizontal" android:id="@+id/tv_bg_result" android:background="@drawable/txt_circle_shape" android:paddingLeft="@dimen/dp_5" android:paddingRight="@dimen/dp_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/waiting_for_test"/>
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="@dimen/dp_75" android:layout_marginTop="10dp" android:layout_marginBottom="@dimen/dp_10" android:layout_marginStart="@dimen/dp_15" android:layout_marginEnd="@dimen/dp_15" android:elevation="@dimen/dp_8" app:cardCornerRadius="@dimen/dp_8">
+            <com.p020kl.healthmonitor.views.CustomResultProgressBar android:layout_gravity="center" android:id="@+id/result_progressbar_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:layout_marginRight="@dimen/dp_15" app:left_text="3.9" app:left_view="@drawable/view_circke_shape_lefttwo" app:left_view_weight="0.333" app:middle_view="@color/darkGreen" app:middle_view_weight="0.333" app:right_text="6.1" app:right_view="@drawable/view_circke_shapetwo" app:right_view_weight="0.333"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_select_measure_time" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_144">
+        <TextView android:textSize="@dimen/dp_17" android:textColor="@color/common_gray_666" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/dp_50" android:layout_marginLeft="@dimen/dp_15" android:text="@string/text_select_measure_time"/>
+        <RadioGroup android:gravity="center" android:id="@+id/rg_measure_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_80">
+            <RadioButton android:textSize="@dimen/dp_16" android:textColor="@color/rb_text_color_selector" android:gravity="center" android:layout_gravity="center" android:id="@+id/rb_before" android:background="@drawable/rb_bg_selector" android:layout_width="@dimen/dp_280" android:layout_height="@dimen/dp_40" android:checked="true" android:button="@null" android:text="@string/before_fasting"/>
+            <RadioButton android:textSize="@dimen/dp_16" android:textColor="@color/rb_text_color_selector" android:gravity="center" android:id="@+id/rb_after" android:background="@drawable/rb_bg_selector" android:layout_width="@dimen/dp_280" android:layout_height="@dimen/dp_40" android:button="@null" android:text="@string/two_hours_after_a_meal"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_strip_code" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_104">
+        <TextView android:textSize="@dimen/dp_17" android:textColor="@color/common_gray_666" android:gravity="center_vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" android:text="请选择试纸厂家: " android:layout_marginStart="@dimen/dp_15"/>
+        <androidx.appcompat.widget.AppCompatSpinner android:id="@+id/spin_test_paper_manufacturer" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10" android:layout_marginStart="@dimen/dp_15"/>
+        <TextView android:textSize="@dimen/dp_17" android:textColor="@color/common_gray_666" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" android:text="@string/blood_glucose_test_strip_correction_code" android:layout_marginStart="@dimen/dp_15"/>
+        <TextView android:textSize="@dimen/dp_25" android:textStyle="bold" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_strip_code" android:layout_width="match_parent" android:layout_height="@dimen/dp_50" android:text="C20"/>
+        <com.p020kl.commonbase.views.PickerScrollView android:id="@+id/picker_view_code" android:layout_width="match_parent" android:layout_height="@dimen/dp_120" android:layout_marginTop="@dimen/dp_40"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_measuring" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_60">
+        <ImageView android:id="@+id/iv_bg_measuring" android:layout_width="match_parent" android:layout_height="@dimen/dp_200" android:layout_marginTop="@dimen/dp_60" android:src="@drawable/img_test_strip" android:scaleType="center"/>
+        <FrameLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/dp_22" android:textColor="@color/darkGreen" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_bg_result_count_down" android:background="@drawable/bg_circle" android:visibility="invisible" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:text="15"/>
+        </FrameLayout>
+        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/common_gray_666" android:gravity="center" android:id="@+id/tv_bg_measuring_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:text="@string/insert_strip" android:layout_marginStart="@dimen/dp_30" android:layout_marginEnd="@dimen/dp_30"/>
+    </LinearLayout>
+    <Button android:id="@+id/btn_bg_measure" android:text="@string/start_measure" style="@style/bigButton"/>
+</LinearLayout>

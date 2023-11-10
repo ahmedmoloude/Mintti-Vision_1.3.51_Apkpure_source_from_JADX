@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_white"/>
+    <com.p020kl.healthmonitor.views.NormalDataView android:layout_gravity="center_horizontal" android:id="@+id/ndv_normal_data" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" app:text="@string/no_historical_records"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_bt_list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+    <View android:id="@+id/v_bottom" android:background="@color/grayeee" android:layout_width="match_parent" android:layout_height="@dimen/dp_1"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_bottom_bar" android:layout_width="match_parent" android:layout_height="@dimen/dp_50">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/all_select" android:padding="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/all_select" android:text="全选" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/all_share" android:padding="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/share" android:text="分享" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

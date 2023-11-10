@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <HorizontalScrollView android:id="@+id/scrollview" android:background="@color/white" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="@dimen/dp_200" android:fillViewport="true">
+        <androidx.cardview.widget.CardView android:id="@+id/cv_card_broke2" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_200" app:cardCornerRadius="@dimen/dp_8">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_top_select" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_200">
+                <TextView android:gravity="center_vertical" android:background="@color/white" android:paddingLeft="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="50dp" android:text="单位：℃"/>
+                <com.p020kl.healthmonitor.views.PdfChartView android:id="@+id/pdf_chart_view" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="@dimen/dp_150" app:interval="@dimen/dp_67" app:linecolor="#44bcb1" app:xytextcolor="#999" app:xytextsize="@dimen/dp_12"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </HorizontalScrollView>
+    <Button android:id="@+id/buttons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="添加数据"/>
+</LinearLayout>

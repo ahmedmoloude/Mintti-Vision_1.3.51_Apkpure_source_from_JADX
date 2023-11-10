@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:id="@+id/ll_calendar_title" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+        <ImageView android:id="@+id/iv_pre_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_left_array"/>
+        <TextView android:textSize="@dimen/dp_16" android:textColor="#333333" android:id="@+id/tv_current_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_40" android:layout_marginRight="@dimen/dp_40" android:text="2019-6"/>
+        <ImageView android:id="@+id/iv_next_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_right_arrow"/>
+    </LinearLayout>
+    <com.haibin.calendarview.CalendarLayout android:orientation="vertical" android:id="@+id/calendarLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="@dimen/dp_10" app:calendar_content_view_id="@+id/rl_char_view" app:default_status="1" app:gesture_mode="2" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/ll_calendar_title">
+        <com.haibin.calendarview.CalendarView android:id="@+id/calendarView" android:layout_width="match_parent" android:layout_height="wrap_content" app:current_day_text_color="@android:color/white" app:current_month_text_color="#666" app:day_text_size="@dimen/dp_16" app:month_view="com.kl.healthmonitor.views.MySingleMonthView" app:month_view_show_mode="2" app:other_month_text_color="#d1d1d1" app:scheme_text_color="@android:color/white" app:scheme_theme_color="#7f44bcb1" app:select_mode="1" app:selected_text_color="@android:color/white" app:selected_theme_color="@color/colorPrimary" app:week_start_with="2" app:week_text_color="#666" app:week_text_size="@dimen/dp_16" app:week_view="com.kl.healthmonitor.views.MySingleWeekView"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/rl_char_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/dp_12" android:id="@+id/tv_record_numble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10"/>
+                <Space android:layout_width="0dp" android:layout_height="@dimen/dp_1" android:layout_weight="1"/>
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_expand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_5" android:src="@drawable/arrow_down"/>
+                <TextView android:textSize="@dimen/dp_12" android:id="@+id/tv_expand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_15" android:text="@string/expand_calendar"/>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView android:id="@+id/cv_card_broke" android:layout_width="match_parent" android:layout_height="@dimen/dp_200" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_15" app:cardCornerRadius="@dimen/dp_8">
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_top_select" android:layout_width="match_parent" android:layout_height="@dimen/dp_200">
+                    <include layout="@layout/history_top_item"/>
+                    <com.p020kl.healthmonitor.views.ChartView android:id="@+id/chartview" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/dp_10" app:interval="@dimen/dp_67" app:linecolor="#44bcb1" app:xytextcolor="#999" app:xytextsize="@dimen/dp_12"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_data_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_10"/>
+        </LinearLayout>
+    </com.haibin.calendarview.CalendarLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

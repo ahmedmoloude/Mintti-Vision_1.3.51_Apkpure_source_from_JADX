@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_include_toolbar_white"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:id="@+id/bt_trends" android:layout_width="@dimen/dp_200" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:layout_marginRight="@dimen/dp_30" android:text="@string/rothman_index_score" style="@style/strokeButton"/>
+        <Button android:id="@+id/bt_observations" android:layout_width="@dimen/dp_200" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_30" android:layout_marginTop="@dimen/dp_30" android:layout_marginRight="@dimen/dp_30" android:text="@string/rothman_observations" style="@style/strokeButton"/>
+    </LinearLayout>
+</FrameLayout>
